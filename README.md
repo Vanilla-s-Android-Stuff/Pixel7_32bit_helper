@@ -23,7 +23,7 @@ The switch is "ro.zygote" property. To spawn the zygote 32-bit process, it requi
 The diff files are for [Magisk](https://github.com/topjohnwu/Magisk).
 
 `magisk-25200-zygote64_32.diff` is for v25.2  
-`magisk-24300-zygote64_32.diff` is for v24.3
+`magisk-25205-zygote64_32.diff` is for Canary 25205
 
 ## License
 
