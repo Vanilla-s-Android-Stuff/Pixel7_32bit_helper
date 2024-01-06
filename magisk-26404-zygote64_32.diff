@@ -1,5 +1,5 @@
 diff --git a/native/src/init/rootdir.cpp b/native/src/init/rootdir.cpp
-index 359c5f1..c800bdd 100644
+index 359c5f1..d737319 100644
 --- a/native/src/init/rootdir.cpp
 +++ b/native/src/init/rootdir.cpp
 @@ -72,6 +72,37 @@ static void patch_rc_scripts(const char *src_path, const char *tmp_path, bool wr
@@ -11,7 +11,7 @@ index 359c5f1..c800bdd 100644
 +            xmkdirs(dirname(ROOTOVL "/vendor/build.prop"), 0755);
 +            FILE *tmp = xfopen(ROOTOVL "/vendor/build.prop", "we");
 +            if (!tmp) {
-+                fprintf(rc, "\tsetprop ro.patch_status failed\n");
++                fprintf(dest.get(), "\tsetprop ro.patch_status failed\n");
 +            } else {
 +                file_readline("/vendor/build.prop", [=](string_view line) -> bool {
 +                    if (str_starts(line, "ro.zygote=zygote64")) {
